@@ -1,6 +1,16 @@
 @use "./assets/sass/_variables.scss" as *;
+* {
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
-  background-color: $color-secondary;
+  background-image: $gradient-primary;
+  color: $color-black;
+  font-family: $font-primary;
 }
 
+.app-title {
+  padding: 2em;
+  font-size: 3em;
+}

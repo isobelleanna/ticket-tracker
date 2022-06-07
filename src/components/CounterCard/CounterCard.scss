@@ -1,7 +1,12 @@
 @use "../../assets/sass/_variables.scss" as *;
 
 .counter-card {
+    border-radius: 15px;
     padding: 1em;
     border: 1px solid $color-primary;
     text-align: center;
+    font-family: $font-secondary;
+    &__title {
+        padding-bottom: 1em;
+    }
 }

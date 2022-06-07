@@ -9,14 +9,22 @@
 }
 
 .team-card {
+    border-radius: 15px;
     padding: 1em;
-    border: solid 2px black;
-    width: 300px;
+    border: solid 2px $color-primary;
+    width: 250px;
     height: 400px;
     text-align: left;
+    background-color: $color-secondary;
     &__name {
         font-size: 2em;
+        font-family: $font-primary;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }&__role {
         font-size: 2em;
+        font-family: $font-primary;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 }
