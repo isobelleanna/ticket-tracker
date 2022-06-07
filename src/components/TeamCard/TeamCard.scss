@@ -1,0 +1,12 @@
+@use "../../assets/sass/_variables.scss" as *;
+.team-card {
+    padding: 1em;
+    border: solid 2px black;
+    width: 300px;
+    text-align: left;
+    &__name {
+        font-size: 2em;
+    }&__role {
+        font-size: 2em;
+    }
+}

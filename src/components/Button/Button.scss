@@ -1,0 +1,13 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.button {
+  margin: 1em;
+  min-width: 80px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
