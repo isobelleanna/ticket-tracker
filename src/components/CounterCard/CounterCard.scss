@@ -8,5 +8,8 @@
     font-family: $font-secondary;
     &__title {
         padding-bottom: 1em;
+    }&__button-bar {
+        display: flex;
+        align-items: center;
     }
 }
