@@ -12,8 +12,15 @@ function App() {
         <Title titleText="Ticket Tracker" />
         <AddUserForm />
       </nav>
-      <TeamCard teamArr={teamMembers} />
-
+      <div className="team-cards">
+        {teamMembers.map((teamMember) => (
+          <TeamCard
+            key={teamMember.id}
+            name={teamMember.name}
+            role={teamMember.role}
+          />
+        ))}
+      </div>
     </div>
   );
 }

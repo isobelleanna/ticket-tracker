@@ -1,13 +1,4 @@
 @use "../../assets/sass/_variables.scss" as *;
-.team-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1em;
-}
-
 .team-card {
     box-shadow: 0px 10px 20px rgba($color-black, 0.6);
     border-radius: 15px;
