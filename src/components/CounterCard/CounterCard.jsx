@@ -9,12 +9,9 @@ const CounterCard = () => {
     setCounter(counter + 1)
   }
    const handleDecrease = () => {
-     if(counter === 0){
-      setCounter(0)
-    }else {
-    setCounter(counter - 1)
-    }
+     counter === 0 ? setCounter(0): setCounter(counter - 1)
   }
+  
   return (
     <div className='counter-card'>
         <h4 className='counter-card__title'>Counter</h4>
