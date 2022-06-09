@@ -6,6 +6,8 @@ Ticket Tracker App- built as part of nology portfolio.
 2. Each component should manange its own state.
 3. The components should be generated using map.
 
+![screenshot of project](/src/assets/images/ticket-project.png)
+
 --PLAN
 
 1. Create the components.
