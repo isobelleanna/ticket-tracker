@@ -4,9 +4,11 @@ import team from "./data/team";
 import Title from "./components/Title/Title";
 import AddUserForm from "./components/AddUserForm/AddUserForm";
 import {useState} from "react";
+import Button from "./components/Button/Button";
 
 function App() {
-  const [teamMembers, setTeamMembers] = useState(team)
+  const [teamMembers, setTeamMembers] = useState(team);
+  const [formActive, setFormActive] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,11 +20,17 @@ function App() {
     setTeamMembers([...teamMembers, newUser])
     event.target.reset();
   };
+
+  const toggleForm = () => {
+    setFormActive(!formActive)
+  }
+  console.log(formActive)
   return (
     <div className="App">
       <nav className="nav">
         <Title titleText="Ticket Tracker" />
-        <AddUserForm handleSubmit={handleSubmit}/>
+        {!formActive && <div onClick={toggleForm}><Button buttonText="Add New User" /></div>}
+        {formActive && <AddUserForm handleSubmit={handleSubmit} toggleForm={toggleForm}/>}
       </nav>
       <div className="team-cards">
         {teamMembers.map((teamMember) => (

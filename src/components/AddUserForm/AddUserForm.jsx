@@ -1,13 +1,14 @@
 import React from "react";
 import "./AddUserForm.scss";
+import whiteCross from "../../assets/images/white-cross.png";
 
 const AddUserForm = (props) => {
   
-  const {handleSubmit} = props;
+  const {handleSubmit, toggleForm} = props;
   return (
    <div>
     <form onSubmit={handleSubmit} className="form">
-            <h2>Add New User</h2>
+      <img className="form__cross" src={whiteCross} alt="White cross" onClick={toggleForm}/>
             <label>
               Enter name:
               <input
@@ -26,7 +27,7 @@ const AddUserForm = (props) => {
                 
               />
             </label>
-            <input type="submit" />
+            <input className="form__submit" type="submit" />
           </form>
         </div>
   );
