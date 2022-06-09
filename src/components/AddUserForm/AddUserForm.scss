@@ -20,6 +20,11 @@
   background-color: $color-white;
   border: 1px solid $color-primary;
   max-width: 50px;
+  &:hover {
+      cursor: pointer;
+      background-color: $color-primary;
+    color: $color-white;
+    }
     }&__cross {
         position: absolute;
     top: 35px;
