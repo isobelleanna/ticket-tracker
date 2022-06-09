@@ -1,19 +1,9 @@
 import React from "react";
 import "./AddUserForm.scss";
 
-const AddUserForm = () => {
-  let index = 11;
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const newUser = {
-        id: index,
-        name: event.target.name.value,
-        role: event.target.role.value
-    }
-    index += 1
-    console.log(newUser)
-  };
-
+const AddUserForm = (props) => {
+  
+  const {handleSubmit} = props;
   return (
    <div>
     <form onSubmit={handleSubmit} className="form">
@@ -23,7 +13,7 @@ const AddUserForm = () => {
               <input
                 className="form__input"
                 type="text"
-                name="role"
+                name="name"
                 
               />
             </label>
@@ -32,7 +22,7 @@ const AddUserForm = () => {
               <input
                 className="form__input"
                 type="text"
-                name="name"
+                name="role"
                 
               />
             </label>

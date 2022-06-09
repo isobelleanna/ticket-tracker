@@ -1,8 +1,11 @@
+@use "../../assets/sass/_variables.scss" as *;
 .form {
+    border: 1px solid $color-secondary;
     display: flex;
     flex-direction: column;
     padding: 1em;
     text-align: left;
+    margin: 1em;
     &__input {
         margin-top: 1vh;
         margin-bottom: 1vh;
