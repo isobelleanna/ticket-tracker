@@ -3,7 +3,7 @@ import TeamCard from "./components/TeamCard/TeamCard";
 import team from "./data/team";
 import Title from "./components/Title/Title";
 import AddUserForm from "./components/AddUserForm/AddUserForm";
-import {useState} from "react";
+import { useState } from "react";
 import Button from "./components/Button/Button";
 
 function App() {
@@ -13,24 +13,30 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const newUser = {
-        id: teamMembers.length + 1,
-        name: event.target.name.value,
-        role: event.target.role.value
-    }
-    setTeamMembers([...teamMembers, newUser])
+      id: teamMembers.length + 1,
+      name: event.target.name.value,
+      role: event.target.role.value,
+    };
+    setTeamMembers([...teamMembers, newUser]);
     event.target.reset();
   };
 
   const toggleForm = () => {
-    setFormActive(!formActive)
-  }
-  console.log(formActive)
+    setFormActive(!formActive);
+  };
+
   return (
     <div className="App">
       <nav className="nav">
         <Title titleText="Ticket Tracker" />
-        {!formActive && <div onClick={toggleForm}><Button buttonText="Add New User" /></div>}
-        {formActive && <AddUserForm handleSubmit={handleSubmit} toggleForm={toggleForm}/>}
+        {!formActive && (
+          <div data-testid="addButton" onClick={toggleForm}>
+            <Button buttonText="Add New User" />
+          </div>
+        )}
+        {formActive && (
+          <AddUserForm handleSubmit={handleSubmit} toggleForm={toggleForm} />
+        )}
       </nav>
       <div className="team-cards">
         {teamMembers.map((teamMember) => (
